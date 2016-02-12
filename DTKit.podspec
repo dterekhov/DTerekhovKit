@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name = "DTKit"
-  spec.version = "0.1.0"
+  spec.version = "0.0.1"
   spec.summary = "Simple framework contains helpers"
   spec.homepage = "https://github.com/dterekhov/DTKit"
   spec.license = { type: 'MIT', file: 'LICENSE' }
