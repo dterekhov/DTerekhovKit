@@ -1,6 +1,18 @@
 # Acknowledgements
 This application makes use of the following third party libraries:
 
+## AppInvites
+
+Copyright 2015 Google Inc.
+
+## GGLInstanceID
+
+Copyright 2015 Google Inc.
+
+## GPPCore
+
+Copyright 2015 Google Inc. All Rights Reserved.
+
 ## Google
 
 Copyright 2015 Google Inc.
@@ -9,9 +21,45 @@ Copyright 2015 Google Inc.
 
 Copyright 2015 Google Inc.
 
+## GoogleAppUtilities
+
+Copyright 2015 Google Inc.
+
+## GoogleAuthUtilities
+
+Copyright 2015 Google Inc.
+
+## GoogleCloudMessaging
+
+Copyright 2015 Google Inc.
+
+## GoogleIPhoneUtilities
+
+Copyright 2015 Google Inc.
+
+## GoogleInterchangeUtilities
+
+Copyright 2015 Google Inc.
+
+## GoogleMobileAds
+
+Copyright 2011 Google Inc. All Rights Reserved.
+
 ## GoogleNetworkingUtilities
 
 Copyright 2015 Google Inc.
+
+## GoogleParsingUtilities
+
+Copyright 2015 Google Inc.
+
+## GooglePlusUtilities
+
+Copyright 2015 Google Inc.
+
+## GoogleSignIn
+
+Copyright 2015 Google Inc. All Rights Reserved.
 
 ## GoogleSymbolUtilities
 

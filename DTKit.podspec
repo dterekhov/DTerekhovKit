@@ -13,5 +13,5 @@ Pod::Spec.new do |spec|
   spec.source_files = "DTKit/**/*.{h,m}"
 
   spec.dependency "MBProgressHUD", "~> 0.9.2"
-  spec.dependency "Google/Analytics", "~> 1.0.0"
+  spec.dependency "Google", "~> 1.0.0"
 end
