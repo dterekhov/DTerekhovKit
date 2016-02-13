@@ -1,8 +1,9 @@
 //
-//  UIImage+ImageProcessing.h
+//  UIImage+DTProcessing.h
+//  DTKit
 //
-//  Created by Vincent Saluzzo on 28/05/12.
-//  Copyright (c) 2012. All rights reserved.
+//  Created by Dmitry Terekhov on 2/12/16.
+//  Copyright © 2016 Dmitry Terekhov. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
@@ -10,7 +11,7 @@
 /**
  *  Processing color of image
  */
-@interface UIImage (LSHIImageProcessing)
+@interface UIImage (DTProcessing)
 
 /**
  *  Convert colored image to grayscale

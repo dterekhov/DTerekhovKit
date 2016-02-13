@@ -1,6 +1,14 @@
-#import "UIView+LSHIFrameAccessors.h"
+//
+//  UIView+DTFrameAccessors.m
+//  DTKit
+//
+//  Created by Dmitry Terekhov on 2/12/16.
+//  Copyright © 2016 Dmitry Terekhov. All rights reserved.
+//
 
-@implementation UIView (LSHIFrameAccessors)
+#import "UIView+DTFrameAccessors.h"
+
+@implementation UIView (DTFrameAccessors)
 
 
 - (void)setFrameX:(float)frameX{

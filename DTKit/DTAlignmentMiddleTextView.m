@@ -1,21 +1,21 @@
 //
-//  AlignmentMiddleTextView.m
-//  Nodchat
+//  DTAlignmentMiddleTextView.m
+//  DTKit
 //
-//  Created by Dmitry Terekhov on 2/1/16.
-//  Copyright © 2016 Csaba Toth. All rights reserved.
+//  Created by Dmitry Terekhov on 2/12/16.
+//  Copyright © 2016 Dmitry Terekhov. All rights reserved.
 //
 
-#import "AlignmentMiddleTextView.h"
+#import "DTAlignmentMiddleTextView.h"
 
-@implementation AlignmentMiddleTextView
+@implementation DTAlignmentMiddleTextView
 
 #pragma mark - Lifecycle
 - (instancetype)initWithCoder:(NSCoder *)coder
 {
     self = [super initWithCoder:coder];
     if (self) {
-        [self setup];
+        [self dt_setup];
     }
     return self;
 }
@@ -24,7 +24,7 @@
 {
     self = [super initWithFrame:frame textContainer:textContainer];
     if (self) {
-        [self setup];
+        [self dt_setup];
     }
     return self;
 }
@@ -33,7 +33,7 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        [self setup];
+        [self dt_setup];
     }
     return self;
 }
@@ -43,7 +43,7 @@
 }
 
 #pragma mark - Setups
-- (void)setup {
+- (void)dt_setup {
     [self addObserver:self forKeyPath:@"contentSize" options:(NSKeyValueObservingOptionNew) context:NULL];
     _textAlignmentIsMiddle = YES; // By default
     
@@ -56,16 +56,16 @@
 #pragma mark - Accessors
 - (void)setTextAlignmentIsMiddle:(BOOL)textAlignmentIsMiddle {
     _textAlignmentIsMiddle = textAlignmentIsMiddle;
-    [self refreshAlignment];
+    [self dt_refreshAlignment];
 }
 
 #pragma mark -
 // For text alignment center vertical in TextView
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
-    [self refreshAlignment];
+    [self dt_refreshAlignment];
 }
 
-- (void)refreshAlignment {
+- (void)dt_refreshAlignment {
     if (self.textAlignmentIsMiddle) {
         CGFloat topInset = (self.bounds.size.height - self.contentSize.height * self.zoomScale) / 2.0;
         topInset = topInset < 0.0 ? 0.0 : topInset;

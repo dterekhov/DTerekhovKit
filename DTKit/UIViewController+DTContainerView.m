@@ -1,17 +1,17 @@
 //
-//  UIViewController+ContainerView.m
-//  HotelsInspector
+//  UIViewController+DTContainerView.m
+//  DTKit
 //
-//  Created by Dmitry Terekhov on 29.06.15.
-//  Copyright (c) 2015 Softwares. All rights reserved.
+//  Created by Dmitry Terekhov on 2/12/16.
+//  Copyright © 2016 Dmitry Terekhov. All rights reserved.
 //
 
-#import "UIViewController+ContainerView.h"
+#import "UIViewController+DTContainerView.h"
 
-@implementation UIViewController (ContainerView)
+@implementation UIViewController (DTContainerView)
 
 #pragma mark - Display embedVC
-- (void)lshi_displayEmbedViewController:(UIViewController *)embedViewController inContainerView:(UIView *)containerView;
+- (void)dt_displayEmbedViewController:(UIViewController *)embedViewController inContainerView:(UIView *)containerView;
 {
     NSAssert(embedViewController != nil, @"embedViewController can not be nil!");
     NSAssert(containerView != nil, @"containerView can not be nil!");

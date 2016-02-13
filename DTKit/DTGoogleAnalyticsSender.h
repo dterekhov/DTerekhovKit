@@ -1,8 +1,9 @@
 //
-//  SFGoogleAnalyticsSender.h
+//  DTGoogleAnalyticsSender.h
+//  DTKit
 //
-//  Created by Dmitry Terekhov on 19.02.15.
-//  Copyright (c) 2015. All rights reserved.
+//  Created by Dmitry Terekhov on 2/12/16.
+//  Copyright © 2016 Dmitry Terekhov. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -10,10 +11,9 @@
 /**
  *  Convenient wrapper for Google Analytics service to Send data
  */
-@interface SFGoogleAnalyticsSender : NSObject
+@interface DTGoogleAnalyticsSender : NSObject
 
 #pragma mark - Main method
-
 /**
  *  Send data to Google Analytics service. Best place to use this method in viewDidAppear in UIViewController.
  *
@@ -26,7 +26,6 @@
 + (void)sendDataWithScreenDescription:(NSString *)screenDescription fromPlace:(id)fromPlace  eventCategory:(NSString *)eventCategory eventAction:(NSString *)eventAction eventLabel:(NSString *)eventLabel;
 
 #pragma mark - Short variations of Main method
-
 /**
  *  Send data to Google Analytics service. Best place to use this method in viewDidAppear in UIViewController.
  *
@@ -47,7 +46,6 @@
 + (void)sendDataFromPlace:(id)fromPlace eventCategory:(NSString *)eventCategory eventAction:(NSString *)eventAction;
 
 #pragma mark - Optional setups
-
 + (void)setupFromPlaceClassNameWithoutGlobalProjectClassPrefix:(NSString *)classPrefix classSuffix:(NSString *)classSuffix;
 + (BOOL)prettyClassNameFromCode;
 + (void)setPrettyClassNameFromCode:(BOOL)value;

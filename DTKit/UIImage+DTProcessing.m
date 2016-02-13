@@ -1,13 +1,14 @@
 //
-//  UIImage+ImageProcessing.m
+//  UIImage+DTProcessing.m
+//  DTKit
 //
-//  Created by Vincent Saluzzo on 28/05/12.
-//  Copyright (c) 2012. All rights reserved.
+//  Created by Dmitry Terekhov on 2/12/16.
+//  Copyright © 2016 Dmitry Terekhov. All rights reserved.
 //
 
-#import "UIImage+LSHIImageProcessing.h"
+#import "UIImage+DTProcessing.h"
 
-@implementation UIImage (LSHIImageProcessing)
+@implementation UIImage (DTProcessing)
 
 const int RED = 1;
 const int GREEN = 2;

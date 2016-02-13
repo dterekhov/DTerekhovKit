@@ -1,16 +1,16 @@
 //
-//  UINavigationController+SFTransition.m
-//  MumMum
+//  UINavigationController+DTTransition.m
+//  DTKit
 //
-//  Created by Dmitry Terekhov on 12/8/15.
-//  Copyright © 2015 Shawn Frank. All rights reserved.
+//  Created by Dmitry Terekhov on 2/12/16.
+//  Copyright © 2016 Dmitry Terekhov. All rights reserved.
 //
 
-#import "UINavigationController+SFTransition.h"
+#import "UINavigationController+DTTransition.h"
 
-@implementation UINavigationController (SFTransition)
+@implementation UINavigationController (DTTransition)
 
-- (void)sf_popViewControllerAnimated:(BOOL)animated completion:(void (^)(UIViewController *backViewController))completion {
+- (void)dt_popViewControllerAnimated:(BOOL)animated completion:(void (^)(UIViewController *backViewController))completion {
     NSInteger countVCs = self.viewControllers.count;
     UIViewController *backVC = countVCs >= 2 ? self.viewControllers[countVCs - 2] : nil;
     
@@ -24,7 +24,7 @@
     [CATransaction commit];
 }
 
-- (BOOL)sf_popToViewControllerOfClass:(Class)aClass animated:(BOOL)animated {
+- (BOOL)dt_popToViewControllerOfClass:(Class)aClass animated:(BOOL)animated {
     for (UIViewController *vc in self.viewControllers) {
         if ([vc isKindOfClass:aClass]) {
             [self popToViewController:vc animated:animated];
@@ -34,7 +34,7 @@
     return NO;
 }
 
-- (void)sf_pushViewController:(UIViewController *)viewController withCompletion:(void (^)(void))completion {
+- (void)dt_pushViewController:(UIViewController *)viewController withCompletion:(void (^)(void))completion {
     [CATransaction begin];
     [self pushViewController:viewController animated:YES];
     if (completion) {

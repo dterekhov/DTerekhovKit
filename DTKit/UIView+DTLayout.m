@@ -1,13 +1,14 @@
 //
-//  UIView+LSHILayout.m
+//  UIView+DTLayout.m
+//  DTKit
 //
-//  Created by Dmitry Terekhov on 17.11.14.
-//  Copyright (c) 2014. All rights reserved.
+//  Created by Dmitry Terekhov on 2/12/16.
+//  Copyright © 2016 Dmitry Terekhov. All rights reserved.
 //
 
-#import "UIView+LSHILayout.h"
+#import "UIView+DTLayout.h"
 
-@implementation UIView (LSHILayout)
+@implementation UIView (DTLayout)
 
 - (void)setConstraintConstant:(CGFloat)constant forAttribute:(NSLayoutAttribute)attribute
 {
@@ -40,22 +41,22 @@
 }
 
 #pragma mark - Accessors
-- (void)setLshi_layoutHeight:(CGFloat)lshi_layoutHeight
+- (void)setDt_layoutHeight:(CGFloat)lshi_layoutHeight
 {
     [self setConstraintConstant:lshi_layoutHeight forAttribute:NSLayoutAttributeHeight];
 }
 
-- (CGFloat)lshi_layoutHeight
+- (CGFloat)dt_layoutHeight
 {
     return [self constraintForAttribute:NSLayoutAttributeHeight].constant;
 }
 
-- (void)setLshi_layoutWidth:(CGFloat)lshi_layoutWidth
+- (void)setDt_layoutWidth:(CGFloat)lshi_layoutWidth
 {
     [self setConstraintConstant:lshi_layoutWidth forAttribute:NSLayoutAttributeWidth];
 }
 
-- (CGFloat)lshi_layoutWidth
+- (CGFloat)dt_layoutWidth
 {
     return [self constraintForAttribute:NSLayoutAttributeWidth].constant;
 }

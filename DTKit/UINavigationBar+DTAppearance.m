@@ -1,16 +1,16 @@
 //
-//  UINavigationBar+DTKAppearance.m
-//  Nodchat
+//  UINavigationBar+DTAppearance.m
+//  DTKit
 //
-//  Created by Dmitry Terekhov on 2/1/16.
-//  Copyright © 2016 Csaba Toth. All rights reserved.
+//  Created by Dmitry Terekhov on 2/12/16.
+//  Copyright © 2016 Dmitry Terekhov. All rights reserved.
 //
 
-#import "UINavigationBar+DTKAppearance.h"
+#import "UINavigationBar+DTAppearance.h"
 
-@implementation UINavigationBar (DTKAppearance)
+@implementation UINavigationBar (DTAppearance)
 
-- (void)setupAppearanceWithBackgroundColor:(UIColor *)backgroundColor {
+- (void)dt_setupAppearanceWithBackgroundColor:(UIColor *)backgroundColor {
     [[UINavigationBar appearance] setTranslucent:NO];
     [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]]; // Screen's title color on top
     [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}]; // Back button icon + title color

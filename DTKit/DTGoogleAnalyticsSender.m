@@ -1,17 +1,17 @@
 //
-//  SFGoogleAnalyticsSender.h
+//  DTGoogleAnalyticsSender.m
+//  DTKit
 //
-//  Created by Dmitry Terekhov on 19.02.15.
-//  Copyright (c) 2015. All rights reserved.
+//  Created by Dmitry Terekhov on 2/12/16.
+//  Copyright © 2016 Dmitry Terekhov. All rights reserved.
 //
 
-#import "SFGoogleAnalyticsSender.h"
+#import "DTGoogleAnalyticsSender.h"
 #import <Google/Analytics.h>
 
-@implementation SFGoogleAnalyticsSender
+@implementation DTGoogleAnalyticsSender
 
 #pragma mark - Main method
-
 + (void)sendDataWithScreenDescription:(NSString *)screenDescription fromPlace:(id)fromPlace  eventCategory:(NSString *)eventCategory eventAction:(NSString *)eventAction eventLabel:(NSString *)eventLabel {
     // May return nil if a tracker has not yet been initialized with a property ID
     id<GAITracker> tracker = [[GAI sharedInstance] defaultTracker];
@@ -22,7 +22,7 @@
     if (fromPlace) {
         NSString *classNameFromCode = NSStringFromClass([fromPlace class]);
         if (_prettyClassNameFromCode) {
-            [SFGoogleAnalyticsSender removePrefixAndSuffixFromClassName:&classNameFromCode];
+            [DTGoogleAnalyticsSender removePrefixAndSuffixFromClassName:&classNameFromCode];
         }
         screenDetailName = screenDescription ? [NSString stringWithFormat:@"%@ (%@)", screenDescription, classNameFromCode] : classNameFromCode;
     }
@@ -47,7 +47,6 @@
 }
 
 #pragma mark - Short variations of Main method
-
 + (void)sendDataFromPlace:(id)fromPlace eventCategory:(NSString *)eventCategory eventAction:(NSString *)eventAction eventLabel:(NSString *)eventLabel {
     [self sendDataWithScreenDescription:nil fromPlace:fromPlace eventCategory:eventCategory eventAction:eventAction eventLabel:eventLabel];
 }
@@ -57,7 +56,6 @@
 }
 
 #pragma mark - Optional setups
-
 static BOOL _prettyClassNameFromCode = NO;
 static NSString *_classPrefix = nil;
 static NSString *_classSuffix = nil;
@@ -77,7 +75,6 @@ static NSString *_classSuffix = nil;
 }
 
 #pragma mark - Helpers
-
 + (void)removePrefixAndSuffixFromClassName:(NSString **)className {
     if (!className || !_prettyClassNameFromCode) { return; }
     

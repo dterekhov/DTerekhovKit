@@ -1,9 +1,9 @@
 //
-//  UIView+PopupLabel.h
-//  HotelsInspector
+//  UIView+DTPopupLabel.h
+//  DTKit
 //
-//  Created by Dmitry Terekhov on 03.02.15.
-//  Copyright (c) 2015 Softwares. All rights reserved.
+//  Created by Dmitry Terekhov on 2/12/16.
+//  Copyright © 2016 Dmitry Terekhov. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
@@ -11,21 +11,21 @@
 /**
  *  Show popup message over current view
  */
-@interface UIView (PopupLabel)
+@interface UIView (DTPopupLabel)
 
 /**
  *  Show popup message with auto hide. Default time interval is 2 sec.
  *
  *  @param text Text in popup message
  */
-- (void)showPopupLabelWithText:(NSString *)text;
+- (void)dt_showPopupLabelWithText:(NSString *)text;
 
 /**
  *  Show popup message with multiple lines of text and auto hide. Default time interval is 4 sec.
  *
  *  @param text Text in popup message
  */
-- (void)showPopupDetailsLabelWithText:(NSString *)text;
+- (void)dt_showPopupDetailsLabelWithText:(NSString *)text;
 
 /**
  *  Show popup message with auto hide
@@ -34,6 +34,6 @@
  *  @param multipleLines Small font and more than one line of text
  *  @param delay Time interval before before message will hide
  */
-- (void)showPopupLabelWithText:(NSString *)text multipleLines:(BOOL)multipleLines delay:(NSTimeInterval)delay;
+- (void)dt_showPopupLabelWithText:(NSString *)text multipleLines:(BOOL)multipleLines delay:(NSTimeInterval)delay;
 
 @end

@@ -1,9 +1,9 @@
 //
-//  UIViewController+ContainerView.h
-//  HotelsInspector
+//  UIViewController+DTContainerView.h
+//  DTKit
 //
-//  Created by Dmitry Terekhov on 29.06.15.
-//  Copyright (c) 2015 Softwares. All rights reserved.
+//  Created by Dmitry Terekhov on 2/12/16.
+//  Copyright © 2016 Dmitry Terekhov. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
@@ -11,7 +11,7 @@
 /**
  *  Parent containerVC to add custom childVCs
  */
-@interface UIViewController (ContainerView)
+@interface UIViewController (DTContainerView)
 
 /**
  *  Correct insert embedVC.view in currentParentVC.containerView
@@ -19,6 +19,6 @@
  *  @param embedViewController Custom child embedVC adding to current parentVC
  *  @param containerView       view belongs to parentVC in which iserting custom child embedVC
  */
-- (void)lshi_displayEmbedViewController:(UIViewController *)embedViewController inContainerView:(UIView *)containerView;
+- (void)dt_displayEmbedViewController:(UIViewController *)embedViewController inContainerView:(UIView *)containerView;
 
 @end

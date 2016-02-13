@@ -1,16 +1,17 @@
 //
-//  UIScrollView+LSHIInfiniteScroll.m
+//  UIScrollView+DTPullToRefresh.m
+//  DTKit
 //
-//  Created by Dmitry Terekhov on 20.10.14.
-//  Copyright (c) 2014. All rights reserved.
+//  Created by Dmitry Terekhov on 2/12/16.
+//  Copyright © 2016 Dmitry Terekhov. All rights reserved.
 //
 
-#import "UIScrollView+LSHIPullToRefresh.h"
+#import "UIScrollView+DTPullToRefresh.h"
 #import <objc/runtime.h>
 
 #define fequalzero(a) (fabs(a) < FLT_EPSILON)
 
-@implementation UIScrollView (LSHIPullToRefresh)
+@implementation UIScrollView (DTPullToRefresh)
 
 #pragma mark - refreshControl accessors
 - (void)setRefreshControl:(UIRefreshControl *)refreshControl
@@ -34,15 +35,15 @@
     return objc_getAssociatedObject(self, @selector(refreshHandler));
 }
 
-- (void)setRefreshControlColor:(UIColor *)refreshControlColor {
+- (void)setDt_refreshControlColor:(UIColor *)refreshControlColor {
     self.refreshControl.backgroundColor = refreshControlColor;
 }
 
-- (UIColor *)refreshControlColor {
+- (UIColor *)dt_refreshControlColor {
     return self.refreshControl.backgroundColor;
 }
 
-- (void)setRefreshControlEnabled:(BOOL)enabled {
+- (void)setDt_refreshControlEnabled:(BOOL)enabled {
     if (enabled) {
         if (self.refreshControl.superview) { return; }
         [self addSubview:self.refreshControl];
@@ -51,12 +52,12 @@
     }
 }
 
-- (BOOL)refreshControlEnabled {
+- (BOOL)dt_refreshControlEnabled {
     return self.refreshControl.superview != nil;
 }
 
 #pragma mark - init
-- (void)lshi_addPullToRefreshWithActionHandler:(RefreshHandler)handler
+- (void)dt_addPullToRefreshWithActionHandler:(RefreshHandler)handler
 {
     self.refreshHandler = handler;
     
@@ -72,7 +73,7 @@
     self.refreshHandler();
 }
 
-- (void)beginRefreshing {
+- (void)dt_beginRefreshing {
     [self.refreshControl beginRefreshing];
     // If not was triggered by user (programmatically)
     if(fequalzero(self.contentOffset.y)) {
@@ -81,7 +82,7 @@
     }
 }
 
-- (void)endRefreshing {
+- (void)dt_endRefreshing {
     [self.refreshControl endRefreshing];
 }
 

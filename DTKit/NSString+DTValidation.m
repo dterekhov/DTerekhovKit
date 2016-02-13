@@ -1,16 +1,16 @@
 //
-//  NSString+Email.m
-//  Nod
+//  NSString+DTValidation.m
+//  DTKit
 //
-//  Created by Nikita Titov on 13/05/15.
-//  Copyright (c) 2015 Nod. All rights reserved.
+//  Created by Dmitry Terekhov on 2/12/16.
+//  Copyright © 2016 Dmitry Terekhov. All rights reserved.
 //
 
-#import "NSString+Email.h"
+#import "NSString+DTValidation.h"
 
-@implementation NSString (Email)
+@implementation NSString (DTValidation)
 
-- (BOOL)isValidEmail {
+- (BOOL)dt_isValidEmail {
     BOOL stricterFilter = NO;
     NSString *stricterFilterString = @"[A-Z0-9a-z\\._%+-]+@([A-Za-z0-9-]+\\.)+[A-Za-z]{2,4}";
     NSString *laxString = @".+@([A-Za-z0-9-]+\\.)+[A-Za-z]{2}[A-Za-z]*";
