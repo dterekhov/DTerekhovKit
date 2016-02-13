@@ -6,9 +6,9 @@ platform :ios, '7.0'
 inhibit_all_warnings!
 
 pod 'MBProgressHUD', '~> 0.9.2'
-pod 'Google', '~> 1.0.0'
+pod 'Google/Analytics', '~> 1.0.0'
 
 target :DTKitTests, :exclusive => true do
 pod 'MBProgressHUD', '~> 0.9.2'
-pod 'Google', '~> 1.0.0'
+pod 'Google/Analytics', '~> 1.0.0'
 end
