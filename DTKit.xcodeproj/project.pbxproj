@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		01280965C4FA3ACB2A299BE0 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F312C807C224DEB35CBB5A59 /* Pods.framework */; };
 		091373DC1C6DFB7C00B216CF /* DTKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 091373DB1C6DFB7C00B216CF /* DTKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		091373E31C6DFB7C00B216CF /* DTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 091373D81C6DFB7C00B216CF /* DTKit.framework */; };
 		091373E81C6DFB7C00B216CF /* DTKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 091373E71C6DFB7C00B216CF /* DTKitTests.m */; };
@@ -34,8 +35,7 @@
 		0985E67B1C6E0A3600D13430 /* UIView+PopupLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0985E6631C6E0A3600D13430 /* UIView+PopupLabel.m */; };
 		0985E67C1C6E0A3600D13430 /* UIViewController+ContainerView.h in Headers */ = {isa = PBXBuildFile; fileRef = 0985E6641C6E0A3600D13430 /* UIViewController+ContainerView.h */; };
 		0985E67D1C6E0A3600D13430 /* UIViewController+ContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0985E6651C6E0A3600D13430 /* UIViewController+ContainerView.m */; };
-		23EAF737100B8DD4D8A7C0AA /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3559247C7EF955E6A2B1807B /* libPods.a */; };
-		E208CA0368AC80E5AC3E795C /* libPods-DTKitTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6391E4D0B275DB1E415146A4 /* libPods-DTKitTests.a */; };
+		C65B76BDFD6BF2BD11C8F3EE /* Pods_DTKitTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2C9EFD994720156C0197543 /* Pods_DTKitTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,9 +81,9 @@
 		0985E6651C6E0A3600D13430 /* UIViewController+ContainerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+ContainerView.m"; sourceTree = "<group>"; };
 		1639A6572F56003D09EF20EB /* Pods-DTKitTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DTKitTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DTKitTests/Pods-DTKitTests.release.xcconfig"; sourceTree = "<group>"; };
 		2FF41636A3414AFAF220CB33 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
-		3559247C7EF955E6A2B1807B /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		6391E4D0B275DB1E415146A4 /* libPods-DTKitTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DTKitTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A2C9EFD994720156C0197543 /* Pods_DTKitTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DTKitTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7CB03DF2B83AB3583447424 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		F312C807C224DEB35CBB5A59 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6709DAD7B64CD6A39ED6E2A /* Pods-DTKitTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DTKitTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DTKitTests/Pods-DTKitTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -92,7 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				23EAF737100B8DD4D8A7C0AA /* libPods.a in Frameworks */,
+				01280965C4FA3ACB2A299BE0 /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,7 +101,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				091373E31C6DFB7C00B216CF /* DTKit.framework in Frameworks */,
-				E208CA0368AC80E5AC3E795C /* libPods-DTKitTests.a in Frameworks */,
+				C65B76BDFD6BF2BD11C8F3EE /* Pods_DTKitTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -184,8 +184,8 @@
 		4BF1E1BBFF770E568D25D16E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				3559247C7EF955E6A2B1807B /* libPods.a */,
-				6391E4D0B275DB1E415146A4 /* libPods-DTKitTests.a */,
+				F312C807C224DEB35CBB5A59 /* Pods.framework */,
+				A2C9EFD994720156C0197543 /* Pods_DTKitTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
