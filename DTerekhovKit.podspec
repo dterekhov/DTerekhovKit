@@ -9,7 +9,7 @@ Pod::Spec.new do |spec|
 
   spec.platform = :ios, "7.0"
   spec.requires_arc = true
-  spec.source = { git: "https://github.com/dterekhov/DTerekhovKit.git", tag: "v#{spec.version}", submodules: true }
+  spec.source = { git: "https://github.com/dterekhov/DTerekhovKit.git", tag: "v#{spec.version}", submodules: true, :commit => "0ce78f3b8b96e824cd6107f2bf677d450ae13eef" }
   spec.source_files = "DTerekhovKit/**/*.{h,m}"
 
   spec.dependency "MBProgressHUD", "~> 0.9.2"
