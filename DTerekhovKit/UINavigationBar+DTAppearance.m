@@ -10,7 +10,7 @@
 
 @implementation UINavigationBar (DTAppearance)
 
-- (void)dt_setupAppearanceWithBackgroundColor:(UIColor *)backgroundColor {
++ (void)dt_setupAppearanceWithBackgroundColor:(UIColor *)backgroundColor {
     [[UINavigationBar appearance] setTranslucent:NO];
     [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]]; // Screen's title color on top
     [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}]; // Back button icon + title color

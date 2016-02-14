@@ -13,6 +13,6 @@
 /**
  *  Global displaying UI with white text and choose background color
  */
-- (void)dt_setupAppearanceWithBackgroundColor:(UIColor *)backgroundColor;
++ (void)dt_setupAppearanceWithBackgroundColor:(UIColor *)backgroundColor;
 
 @end

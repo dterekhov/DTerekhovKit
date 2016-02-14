@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name = "DTerekhovKit"
-  spec.version = "0.0.2"
+  spec.version = "0.0.3"
   spec.summary = "Simple framework contains helpers"
   spec.homepage = "https://github.com/dterekhov/DTerekhovKit"
   spec.license = { type: 'MIT', file: 'LICENSE' }
