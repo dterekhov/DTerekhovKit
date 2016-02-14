@@ -8,7 +8,7 @@ inhibit_all_warnings!
 pod 'MBProgressHUD', '~> 0.9.2'
 pod 'Google/Analytics', '~> 1.0.0'
 
-target :DTKitTests, :exclusive => true do
+target :DTerekhovKitTests, :exclusive => true do
 pod 'MBProgressHUD', '~> 0.9.2'
 pod 'Google/Analytics', '~> 1.0.0'
 end
