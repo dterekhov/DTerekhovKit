@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name = "DTerekhovKit"
-  spec.version = "0.0.4"
+  spec.version = "0.0.5"
   spec.summary = "Simple framework contains helpers"
   spec.homepage = "https://github.com/dterekhov/DTerekhovKit"
   spec.license = { type: 'MIT', file: 'LICENSE' }
@@ -12,6 +12,6 @@ Pod::Spec.new do |spec|
   spec.source = { git: "https://github.com/dterekhov/DTerekhovKit.git", tag: "v#{spec.version}", submodules: true }
   spec.source_files = "DTerekhovKit/**/*.{h,m}"
 
-  spec.dependency "MBProgressHUD", "~> 0.9.2"
-  spec.dependency "Google/Analytics", "~> 1.0.0"
+  spec.dependency "MBProgressHUD"
+  spec.dependency "GoogleAnalytics"
 end
