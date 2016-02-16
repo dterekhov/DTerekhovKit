@@ -7,7 +7,9 @@
 //
 
 #import "DTGoogleAnalyticsSender.h"
-#import <Google/Analytics.h>
+#import <GoogleAnalytics/GAI.h>
+#import <GoogleAnalytics/GAIDictionaryBuilder.h>
+#import <GoogleAnalytics/GAIFields.h>
 
 @implementation DTGoogleAnalyticsSender
 
